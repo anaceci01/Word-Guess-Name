@@ -1,3 +1,13 @@
-.box {
-    background-image: url(images/underwater.png);
+body {
+    background-image: url(http://static1.squarespace.com/static/5442a762e4b0f7692c706f16/5477d4e5e4b0464e56cf4a75/5c1aac24c2241b621f76fa48/1547146553576/Under-the-Sea-1500x1000.jpg?format=1500w);
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    min-width: 70%;
+    min-height: 70%;
+}
+
+
+    
 }
