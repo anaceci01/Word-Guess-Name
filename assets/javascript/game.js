@@ -25,8 +25,8 @@ var setup = function() {
     display [i] = "_ ";
     output = output + display[i];
 }
- document.getElementById("words").innerHTML = output;
- output ="";   
+// document.getElementById("words").innerHTML = output;
+ //output ="";   
 
  window.onload = function () {
      setup ();
