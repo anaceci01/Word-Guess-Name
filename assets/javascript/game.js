@@ -1,34 +1,40 @@
-var $ = function (id) {
-    return document.getElementById(id);
-}
-
-
-var words = ["shark", "dolphin", "scubadiving", "snorkel", "whale", "fish"]
-var wordChoice = Math.floor(Math.random()*5);
-var answer = words[wordChoice];
-var myLength = answer.length;
-var display = [myLength];
-var win = myLength;
-var letters = answer.split ('');
-var attemptsleft = 7;
-var output = "";
-var userLetter = "";
+$(document).ready(function () {
 
 
 
+    var letter = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var winsCount = 0;
+    var lossesCount = 0;
+    var guessRemaining = 12;
+    var letterGuessed = [];
+    document.onkeyup = function (event) {
+        var userGuess = event.key;
+        letterGuessed.push(letter.userGuess);
 
+        var computerGuess = letter[Math.floor(Math.random() * letter.length)];
+        console.log(computerGuess)
 
+        if (userGuess === computerGuess) {
+            winsCount++;
+            guessRemaining = 11;
+        }
+        else {
+         guessRemaining--; 
+        }
+        if (guessRemaining === 0 ) {
+            lossesCount++;
+            guessRemaining =10;
+        }
 
-// Functions
-var setup = function() {
-    for (var i=0; i<answer.lenght; i++)
-    display [i] = "_ ";
-    output = output + display[i];
-}
-// document.getElementById("words").innerHTML = output;
- //output ="";   
+        var html = "<h3>Guess what letter I'm thinking of:</h3>" +
+        "<p>"
 
- window.onload = function () {
-     setup ();
+        document.getElementById("letterGuessed").innerHTML = userGuess;
+        document.getElementById('wins').innerHTML = "" + winsCount;
+        document.getElementById('losses').innerHTML = "" + lossesCount;
+        document.getElementById('guessRemaining').innerHTML = "" + guessRemaining;
+    
+    }
+    
 
- }
+});

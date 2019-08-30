@@ -11,38 +11,35 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link href="https://fonts.googleapis.com/css?family=Carter+One&display=swap" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
   <title>Word Guess Game</title>
 </head>
 
 <body>
-  <div id="empty-div"></div>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">WORD GUESS GAME</h1>
+      <h2> Guess a Letter To Start The Game!</h2>
+
+      <h4>Letter Guessed:
+        <span id="letterGuessed"></span>
+      </h4>
+
+      <h4>Guesses Left:
+        <span id="guessRemaining">13</span>
+      </h4>
+
+      <h4>Losses:
+        <span id="losses">0</span>
+      </h4>
+
+      <h4>Wins:
+        <span id="wins">0</span>
+      </h4>
 
 
-  <div class="container">
-    <div class="jumbotron vertical-center jumbotron-fluid mx-auto text-center">
-      <div class="container">
-        <h1 class="display-4">WORD GUESS GAME</h1>
-        <h2>Press Any Key To Get Started</h2>
-        <h1 id="RandomWord">_ _ _ _ _ _ _ _ _ _</h1>
-        <h2 id="GuessesLeft">Guesses Left:</h2>
-        <h3 id="GuessedLetter">Letters You've Guessed:<h3>
-            <br>
-            <h1 id="WinsCount">Wins:</h1>
-            <br>
-            <h1 id="LossCount">Losses:</h1>
-      </div>
-    </div>
-  </div>
- 
-</body>
 
-<script type="text/javascript" src="./assets/javascript/game.js"></script>
-
-</script>
-
+      <script type="text/javascript" src="./assets/javascript/game.js"></script>
 
 </html>

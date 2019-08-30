@@ -11,6 +11,8 @@ body {
 .jumbotron {
     background-color: transparent;
     font-family: 'Carter One', cursive;
+    color: aquamarine;
+    font: outline black;
 }
 
 #Wins {
